@@ -27,7 +27,7 @@ const options = {
             {
                 type: "time",
                 time: {
-                    parser: "MM/DD/YY",
+                    format: "MM/DD/YY",
                     tooltipFormat: "ll",
                 },
             },
@@ -47,7 +47,7 @@ const options = {
     },
 };
 
-function LineGraph({casesType = 'cases'}) {
+function LineGraph({casesType = 'cases', ...props}) {
     const [data, setData] = useState({});
 
     const buildChartData = (data, casesType='cases') => {
@@ -84,10 +84,9 @@ function LineGraph({casesType = 'cases'}) {
 
 
     return (
-        <div>
+        <div className ={props.className}>
             {data?.length > 0 && (
                 <Line 
-                options={options}
                 data={{
                     datasets: [{
                         backgroundColor: "rgba(204, 16, 52, 0.2)",
@@ -96,11 +95,12 @@ function LineGraph({casesType = 'cases'}) {
     
                     }],
                 }}
+                options={options}
                 />
             )}
             
         </div>
     );
-};
+}
 
 export default LineGraph
