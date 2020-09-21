@@ -9,7 +9,7 @@ import CardContent from '@material-ui/core/CardContent';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import {sortData} from './util';
+import {sortData, prettyPrintStat} from './util';
 
 import './App.css';
 
@@ -89,14 +89,14 @@ function App() {
 
         <div className="app__stats">
           <InfoBox title = "Coronavirus Cases" 
-          cases={countryInfo.todayCases} 
-          total={countryInfo.cases}/>
+          cases={prettyPrintStat(countryInfo.todayCases)}
+          total={prettyPrintStat(countryInfo.cases)}/>
           <InfoBox title="Recovered" 
-          cases={countryInfo.todayRecovered} 
-          total={countryInfo.recovered}/>
+          cases={prettyPrintStat(countryInfo.todayRecovered)}
+          total={prettyPrintStat(countryInfo.recovered)}/>
           <InfoBox title="Deaths" 
-          cases={countryInfo.todayDeaths} 
-          total={countryInfo.deaths}/>
+          cases={prettyPrintStat(countryInfo.todayDeaths)} 
+          total={prettyPrintStat(countryInfo.deaths)}/>
         </div>
 
         <Map 
