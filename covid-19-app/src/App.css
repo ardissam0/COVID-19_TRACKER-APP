@@ -156,7 +156,7 @@ input[type="checkbox"].checkbox + label {
   left: 2px;
   background: #fff;
   opacity: 0.9;
-  background-color: cyan;
+  background-color: lightgreen;
 }
 
 .toggle-container {

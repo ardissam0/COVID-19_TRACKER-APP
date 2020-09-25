@@ -104,7 +104,7 @@ function App() {
           <div className="app__header">
             <h1>COVID-19 TRACKER</h1>
             <div className="toggle-container">
-              <span style={{ color: darkMode ? "grey" : "yellow" }}>☀︎</span>
+              <span style={{ color: darkMode ? "yellow" : "grey" }}>☀︎</span>
               <span className="toggle">
                 <input
                   checked={darkMode}
