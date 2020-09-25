@@ -4,12 +4,12 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
-function InfoBox({title, cases, total, active, isRed, ...props }) {
+function InfoBox({title, cases, total, activeC, activeR, activeD, isBlack, isRed, ...props }) {
     return (
         <Card  
         onClick={props.onClick}
-        className={`infoBox ${active && "infoBox--selected"} ${
-          isRed && "infoBox--red"
+        className={`infoBox ${activeR && "infoBox--selected"} ${activeD && "infoBox--selected2"} ${
+          activeC && "infoBox--red"
         }`}
         >
             <CardContent>
@@ -17,7 +17,7 @@ function InfoBox({title, cases, total, active, isRed, ...props }) {
                     {title}
                 </Typography>
 
-                <h2 className={`infoBox__cases ${!isRed && "infoBox__cases--green"}`}>{cases}</h2>
+                <h2 className={`infoBox__cases ${!isRed && "infoBox__cases--green"} ${isBlack && "infoBox__deaths--black"}`}>{cases}</h2>
 
                 <Typography className="infoBox__total" color='textSecondary'>
                     {total} Total

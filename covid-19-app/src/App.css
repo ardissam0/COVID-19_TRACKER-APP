@@ -11,6 +11,7 @@ body {
   justify-content: space-evenly;
   background-color: #f5f6fa;
   padding: 20px;
+  font-weight: bold;
 }
 
 .app__header {
@@ -21,7 +22,8 @@ body {
 }
 
 .app__header > h1 {
-  color: #fc3c3c;
+  color: white;
+  text-shadow: 0 0 3px #DC143C, 0 0 10px #DC143C;                  
   font-size: 2rem;
 }
 
@@ -58,8 +60,16 @@ body {
 .app__right {
   display: flex;
   flex-direction: column;
-  margin-top: 20px
+  margin-top: 20px;
+  margin-left: 20px;
 }
+
+@media(max-width: 990px) {
+  .app__right {
+    margin-left: 0px;
+  }
+}
+
 
 .app__right .MuiCardContent-root {
   display: flex;
@@ -73,6 +83,7 @@ body {
 
 .app__graphTitle {
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 @media(max-width: 990px) {
