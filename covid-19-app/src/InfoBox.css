@@ -2,6 +2,12 @@
     flex: 1;
     cursor: pointer;
   }
+
+  @media(max-width: 600px) {
+    .infoBox {
+      margin-top: 20px;
+    }
+  }
   
   .infoBox:not(:last-child) {
     margin-right: 10px;

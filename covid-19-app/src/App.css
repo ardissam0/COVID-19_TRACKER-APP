@@ -2,14 +2,16 @@
   margin: 0;
 }
 
-body {
-  background-color: #f5f6fa;
-}
-
-.app {
+.dark-mode {
   display: flex;
   justify-content: space-evenly;
-  background-color: #f5f6fa;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.light-mode {
+  display: flex;
+  justify-content: space-evenly;
   padding: 20px;
   font-weight: bold;
 }
@@ -34,6 +36,13 @@ body {
 @media(max-width: 600px) {
   .app__dropdown {
     width: 65%;
+  }
+}
+
+@media(max-width: 600px) {
+  .app__header {
+    flex-direction: column;
+    margin-top: 10px;
   }
 }
 
@@ -87,7 +96,91 @@ body {
 }
 
 @media(max-width: 990px) {
-  .app {
+  .dark-mode, .light-mode {
     flex-direction: column;
   }
+}
+
+
+.light-mode {
+  background-color: #f5f6fa;
+  transition: background-color 0.25s ease-out;
+}
+
+.dark-mode {
+  background-color: #1a1919;
+  transition: background-color 0.25s ease-out;
+}
+
+h1 {
+  margin: 0;
+}
+
+.toggle {
+  position: relative;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"].checkbox {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: none;
+}
+
+input[type="checkbox"].checkbox:checked + label {
+  left: 30px;
+}
+
+input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px white;
+}
+
+input[type="checkbox"].checkbox + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  left: 2px;
+  background: #fff;
+  opacity: 0.9;
+  background-color: cyan;
+}
+
+.toggle-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+@media(max-width: 600px) {
+  .toggle-container {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.toggle-container > span {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+
+.toggle-container > span:last-child {
+  margin-top: 5px;
 }
