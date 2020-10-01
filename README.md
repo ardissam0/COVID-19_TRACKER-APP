@@ -51,5 +51,15 @@ This project has a minimal design with data that is displayed in numbers, graphs
   }, []);
   ```
 
+# Installation
+
+> Clone to your local machine
+`https://github.com/ardissam0/COVID-19_TRACKER-APP.git`
+
+> Setup
+```
+$ npm i
+$ npm start
+```
 
 
