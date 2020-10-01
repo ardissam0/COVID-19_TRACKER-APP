@@ -15,11 +15,8 @@ I built this project because I wanted to build something with relevance and use 
 
 ---
 
-# Build status
-
-# Code Style
-
 # Screenshots
+
 
 # Tech/framework used
 
@@ -82,15 +79,6 @@ Reach out to me on social media if you have any questions!
 [<img align="left" alt="Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
 [<img align="left" alt="LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 [<img align="left" alt="Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
-
-<br />
-
----
-
-[![HitCount](http://hits.dwyl.com/ardissam0/ardissam0/COVID-19_TRACKER-APP.svg)](http://hits.dwyl.com/ardissam0/ardissam0/COVID-19_TRACKER-APP)
-
-# License
-
 
 [website]: https://samardis.com/
 [twitter]: https://twitter.com/samuel_ardis
