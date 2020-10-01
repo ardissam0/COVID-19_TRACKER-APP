@@ -16,7 +16,8 @@ I built this project because I wanted to build something with relevance and use 
 ---
 
 # Screenshots
-
+![](img/covidtopimg.jpg)
+![](img/covidbottomimg.jpg)
 
 # Tech/framework used
 
