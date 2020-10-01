@@ -62,4 +62,14 @@ $ npm i
 $ npm start
 ```
 
+# API Reference
+https://corona.lmao.ninja/docs/
+
+# Support
+
+
+# License
+
+
+
 
