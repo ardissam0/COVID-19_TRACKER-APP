@@ -4,7 +4,8 @@ This is a Covid-19 Tracking app that displays dynamic information on the daily c
 # Motivation
 I built this project because I wanted to build something with relevance and use to people in the world right now. 
 
-#Build status
+# Build status
+
 
 
 
