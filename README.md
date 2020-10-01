@@ -87,6 +87,8 @@ Reach out to me on social media if you have any questions!
 
 ---
 
+[![HitCount](http://hits.dwyl.com/ardissam0/ardissam0/COVID-19_TRACKER-APP.svg)](http://hits.dwyl.com/ardissam0/ardissam0/COVID-19_TRACKER-APP)
+
 # License
 
 
