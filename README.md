@@ -25,7 +25,7 @@ I built this project because I wanted to build something with relevance and use 
 # Tech/framework used
 
 #### Built with
-- React
+- [React][react]
 - Chart.js
 - Material-ui
 
@@ -88,3 +88,4 @@ Reach out to me on social media if you have any questions!
 [twitter]: https://twitter.com/samuel_ardis
 [instagram]: https://www.instagram.com/samuel.d.ardis/
 [linkedin]: https://www.linkedin.com/in/samuel-ardis/
+[react]: https://reactjs.org/
