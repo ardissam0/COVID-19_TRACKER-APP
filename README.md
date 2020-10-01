@@ -11,7 +11,7 @@ I built this project because I wanted to build something with relevance and use 
 - [Installation](#installation)
 - [Features](#features)
 - [Support](#support)
-- [License](#license)
+- [Tech](#tech/framework used)
 
 ---
 
