@@ -11,7 +11,7 @@ I built this project because I wanted to build something with relevance and use 
 - [Installation](#installation)
 - [Features](#features)
 - [Support](#support)
-- [Tech](#tech/framework used)
+- [Tech](#tech)
 
 ---
 
@@ -22,7 +22,7 @@ I built this project because I wanted to build something with relevance and use 
 
 ![](covid-19-app/src/img/covibottomimg.JPG)
 
-# Tech/framework used
+# Tech
 
 #### Built with
 - [React][react]
