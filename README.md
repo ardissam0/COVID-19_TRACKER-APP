@@ -12,7 +12,7 @@ I built this project because I wanted to build something with relevance and use 
 
 # Tech/framework used
 
-## Built with
+#### Built with
 - React
 - Chart.js
 - Material-ui
@@ -21,7 +21,35 @@ I built this project because I wanted to build something with relevance and use 
 This project has a minimal design with data that is displayed in numbers, graphs, and visually on the map. The map has popups to showcase country info once you click on a country. It also has a dark mode toggle for anyone who prefers a darker background. 
 
 # Code Example
+```
+  useEffect(() => {
+    fetch('https://disease.sh/v3/covid-19/all')
+    .then(response => response.json())
+    .then(data => {
+      setCountryInfo(data)
+    })
+  }, []);
 
+  useEffect(() => {
+    const getCountriesData = async () => {
+      await fetch ("https://disease.sh/v3/covid-19/countries")
+      .then((response) => response.json())
+      .then((data) => {
+        const countries = data.map((country) => ({
+            name: country.country,
+            value: country.countryInfo.iso2,
+          }));
+          
+          const sortedData = sortData(data);
+          setTableData(sortedData);
+          setMapCountries(data);
+          setCountries(countries);
+      });
+    };
+
+    getCountriesData();
+  }, []);
+  ```
 
 
 
