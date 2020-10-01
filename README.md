@@ -27,7 +27,7 @@ I built this project because I wanted to build something with relevance and use 
 #### Built with
 - [React][react]
 - [Chart.js][chartjs]
-- Material-ui
+- [Material-ui][material]
 
 # Features
 This project has a minimal design with data that is displayed in numbers, graphs, and visually on the map. The map has popups to showcase country info once you click on a country. It also has a dark mode toggle for anyone who prefers a darker background. 
@@ -90,3 +90,4 @@ Reach out to me on social media if you have any questions!
 [linkedin]: https://www.linkedin.com/in/samuel-ardis/
 [react]: https://reactjs.org/
 [chartjs]: https://www.chartjs.org/docs/latest/
+[material]: https://material-ui.com/
