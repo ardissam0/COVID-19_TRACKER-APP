@@ -26,7 +26,7 @@ I built this project because I wanted to build something with relevance and use 
 
 #### Built with
 - [React][react]
-- Chart.js
+- [Chart.js][chartjs]
 - Material-ui
 
 # Features
@@ -89,3 +89,4 @@ Reach out to me on social media if you have any questions!
 [instagram]: https://www.instagram.com/samuel.d.ardis/
 [linkedin]: https://www.linkedin.com/in/samuel-ardis/
 [react]: https://reactjs.org/
+[chartjs]: https://www.chartjs.org/docs/latest/
