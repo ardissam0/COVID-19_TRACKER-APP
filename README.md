@@ -8,8 +8,6 @@ I built this project because I wanted to build something with relevance and use 
 
 ## Table of Contents
 
-> If your `README` has a lot of info, section headers might be nice.
-
 - [Installation](#installation)
 - [Features](#features)
 - [Support](#support)
