@@ -6,6 +6,5 @@ I built this project because I wanted to build something with relevance and use 
 
 #Build status
 
-[![ardissam0](https://circleci.com/gh/ardissam0/COVID-19_TRACKER-APP.svg?style=svg)](<LINK>)
 
 
