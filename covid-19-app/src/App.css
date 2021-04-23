@@ -1,8 +1,62 @@
 * {
   margin: 0;
 }
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+  border-bottom: 8px solid grey;
+  background-color: #f5f6fa;
+  font-size: 1.2rem;
+}
+
+@media(max-width: 600px) {
+  .navigation {
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #f5f6fa;
+  }
+}
+
+.navigation .navLink{
+  border: 1px solid #f5f6fa;
+  background-color: #f5f6fa;
+  border-radius: 5x;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.navigation .navLink p{
+  color: black;
+}
+
+.navigation .navLink:hover{
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.navigation .navLink p:hover{
+  color: white;
+}
+
+@media(max-width: 600px) {
+  .navigation .navLink {
+    margin-top: 10px;
+    background-color: grey;
+    text-align: center;
+  }
+}
+
+@media(max-width: 600px) {
+  .navigation .navLink p {
+    color: white;
+  }
+}
 
 .dark-mode {
+  background-color: #1a1919;
+  color: white;
+  transition: background-color 0.25s ease-out;
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
@@ -10,6 +64,8 @@
 }
 
 .light-mode {
+  background-color: #f5f6fa;
+  transition: background-color 0.25s ease-out;
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
@@ -23,10 +79,9 @@
   justify-content: space-between;
 }
 
-.app__header > h1 {
-  color: white;
-  text-shadow: 0 0 3px #DC143C, 0 0 10px #DC143C;                  
-  font-size: 2rem;
+h1 {
+  color: black;                 
+  font-size: 1.5rem;
 }
 
 .app__dropdown {
@@ -101,17 +156,6 @@
   }
 }
 
-
-.light-mode {
-  background-color: #f5f6fa;
-  transition: background-color 0.25s ease-out;
-}
-
-.dark-mode {
-  background-color: #1a1919;
-  transition: background-color 0.25s ease-out;
-}
-
 h1 {
   margin: 0;
 }
@@ -184,3 +228,79 @@ input[type="checkbox"].checkbox + label {
 .toggle-container > span:last-child {
   margin-top: 5px;
 }
+
+.stateCard h2 {
+  margin-bottom: 8px;
+  padding: 3.5px;
+}
+
+.card-subtitle {
+  margin-bottom: 3px;
+}
+
+.card-subtitle span, p{
+  display: inline;
+}
+
+.card-subtitle span p{
+  margin-left: 3px;
+}
+
+.state-list {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 3rem;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 82%;
+}
+
+@media(max-width: 990px) {
+  .search__states {
+    border-top: 8px solid grey;
+  }
+}
+
+.app__left-US {
+  flex: .9;
+  margin: 2% 5% 0 5%;
+  min-width: 16%;
+}
+
+.table__holder .table{
+  margin-top: 42px;
+}
+
+@media(max-width: 990px) {
+  .app__left-US {
+    margin: 0% 2% 0% 2%;
+  }
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.input {
+  margin: 0.5rem;
+}
+
+.textbox {
+  border: 8px solid grey;
+  padding: 4%;
+}
+
+.textbox li{
+  margin-bottom: 5px;
+}
+
+footer {
+  text-align: center;
+  background-color: #f5f6fa;
+  padding: 3%;
+}
+
