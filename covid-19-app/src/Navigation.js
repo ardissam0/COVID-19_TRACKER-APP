@@ -23,7 +23,7 @@ const Navigation = () => {
           <Link style ={{textDecoration: 'None'}} to="/About"><p>About</p></Link>
         </div>
         <div className="navLink">
-          <Link style ={{textDecoration: 'None'}} to="/signin"><button className="Logout__button" onClick={() => fire.auth().signOut()}>Log Out</button></Link>
+          <button className="Logout__button" onClick={() => fire.auth().signOut()}>Log Out</button>
         </div>
       </div>
     </div>

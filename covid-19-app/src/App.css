@@ -65,6 +65,8 @@ code {
     monospace;
 }
 
+/* Navigation/Link Styles */
+
 .navigation {
   display: flex;
   justify-content: space-evenly;
@@ -119,6 +121,8 @@ code {
   }
 }
 
+/* Dark Mode Styles */
+
 .dark-mode {
   background-color: #1a1919;
   color: white;
@@ -137,6 +141,14 @@ code {
   padding: 20px;
   font-weight: bold;
 }
+
+@media(max-width: 990px) {
+  .dark-mode, .light-mode {
+    flex-direction: column;
+  }
+}
+
+/* Main pages styling */
 
 .app__header {
   display: flex;
@@ -216,15 +228,11 @@ h1 {
   margin-bottom: 10px;
 }
 
-@media(max-width: 990px) {
-  .dark-mode, .light-mode {
-    flex-direction: column;
-  }
-}
-
 h1 {
   margin: 0;
 }
+
+/* Toggle For Dark Mode */
 
 .toggle {
   position: relative;
@@ -295,16 +303,6 @@ input[type="checkbox"].checkbox + label {
   margin-top: 5px;
 }
 
-.sc-gsDJrp.jeqovw {
- min-width: 13vw;
-}
-
-.stateCard h2 {
-  margin-bottom: 8px;
-  padding: 0 0 3px 0px;
-  font-size: 1.3rem;
-}
-
 .card-subtitle {
   margin-bottom: 6px;
 }
@@ -316,6 +314,8 @@ input[type="checkbox"].checkbox + label {
 .card-subtitle span p{
   margin-left: 3px;
 }
+
+/* United States Page Styling*/
 
 .state-list {
   background-repeat: no-repeat;
@@ -334,6 +334,12 @@ input[type="checkbox"].checkbox + label {
   }
 }
 
+.stateCard h2 {
+  margin-bottom: 8px;
+  padding: 0 0 3px 0px;
+  font-size: 1.3rem;
+}
+
 .app__left-US {
   flex: .9;
   margin: 2% 5% 0 5%;
@@ -345,9 +351,20 @@ input[type="checkbox"].checkbox + label {
   margin-top: 42px;
 }
 
-@media(max-width: 990px) {
+@media(max-width: 800px) {
   .app__left-US {
-    margin: 0% 2% 0% 2%;
+    margin: 2% 2% 8% 2%;
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 800px) {
+  .sc-bdvvaa.fOHLde, form .search{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 2% 8% 2%;
+    padding: 0;
   }
 }
 
@@ -355,6 +372,12 @@ input[type="checkbox"].checkbox + label {
   display: flex;
   width: 100%;
   align-self: flex-end;
+}
+
+@media(max-width: 800px) {
+  .search input{
+    margin-top: 7px;
+  }
 }
 
 .input {
@@ -370,16 +393,34 @@ input[type="checkbox"].checkbox + label {
   margin-bottom: 10px;
 }
 
+.sc-gsDJrp.jeqovw {
+  min-width: 13vw;
+ }
+
+ @media(max-width: 990px) {
+  .sc-gsDJrp.jeqovw {
+    justify-content: center;
+    min-width: 20%;
+    padding: 5% 0% 6% 0%;
+  }
+}
+
+/* Weather Page Styling */
+
 .Weather .Card1{
   padding: 5%;
   background-color: rgb(170,211,223);
 }
+
+/* Footer Styling */
 
 footer {
   text-align: center;
   background-color: #f5f6fa;
   padding: 3%;
 }
+
+/* Login/SignUp Styling */
 
 .login-main {
   display: flex;
@@ -451,6 +492,8 @@ footer {
 .login-main .mainLogin-btn:hover {
   background-color: grey;
 }
+
+/* Logout Stlying */
 
 .Logout__button{
   cursor: pointer;
