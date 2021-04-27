@@ -114,9 +114,6 @@ function Home() {
                 <label htmlFor="checkbox" />
               </span>
               <span style={{ color: darkMode ? "slateblue" : "grey" }}>☾</span>
-              {/* <button onClick={() => setDarkMode(prevMode => !prevMode)}>
-              Toggle
-            </button> */}
             </div>
             <FormControl className="app__dropdown">
               <Select variant='outlined' value={country} onChange={onCountryChange}>
