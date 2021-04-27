@@ -69,8 +69,8 @@ export default function SearchStates(props) {
                     id="search"
                     type='text' 
                     placeholder='Enter State' 
-                    onChange={handleInputChange}
                     value={searchSomething}
+                    onChange={handleInputChange}
                     name="name"
                     tabIndex="0"
                     className="prompt search-name"

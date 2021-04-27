@@ -1,0 +1,50 @@
+
+.container-weather {
+    margin-top: 3rem;
+  }
+
+  .weather-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .city-country-div {
+      margin: 0 20px 0 20px;
+  }
+
+  .weather-btn {
+      background-color: #F7B301;
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      cursor: pointer;
+  }
+  
+  .alert {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom: 2px solid tomato;
+  }
+
+  form input[name="city"],
+  form input[name="country"] {
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    border-radius: 0;
+  }
+
+  @media(max-width: 650px) {
+    .weather-form {
+      flex-direction: column;
+    }
+  }
+  
+  @media(max-width: 650px) {
+    .weather-form .city-country-div, .weather-btn{
+      margin: 10px;
+    }
+  }
+  

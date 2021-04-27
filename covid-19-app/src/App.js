@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Switch} from 'react-router-dom';
 import Navigation from './Navigation';
+import Weather from './Weather';
+import Login from './Login';
 import Home from './Home';
 import About from './About';
 import US from './US';
@@ -17,6 +19,8 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route path='/US' component={US} />
         <Route path='/About' component={About} />
+        <Route path='/Weather' component={Weather} />
+        <Route path='/Login' component = {Login} />
         </Switch>
       </div>
       <div>

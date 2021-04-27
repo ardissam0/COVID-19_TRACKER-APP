@@ -1,6 +1,70 @@
-* {
-  margin: 0;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input:focus {
+  outline:none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 .navigation {
   display: flex;
   justify-content: space-evenly;
@@ -32,10 +96,12 @@
 
 .navigation .navLink:hover{
   background-color: grey;
+  transition: all 250ms ease-in-out;
   border-radius: 5px;
 }
 
 .navigation .navLink p:hover{
+  transition: all 250ms ease-in-out;
   color: white;
 }
 
@@ -191,13 +257,13 @@ input[type="checkbox"].checkbox:focus-visible {
 
 input[type="checkbox"].checkbox + label {
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   transition: all 0.3s ease;
   cursor: pointer;
   position: absolute;
-  left: 2px;
+  left: 3px;
   background: #fff;
   opacity: 0.9;
   background-color: lightgreen;
@@ -229,13 +295,18 @@ input[type="checkbox"].checkbox + label {
   margin-top: 5px;
 }
 
+.sc-gsDJrp.jeqovw {
+ min-width: 13vw;
+}
+
 .stateCard h2 {
   margin-bottom: 8px;
-  padding: 3.5px;
+  padding: 0 0 3px 0px;
+  font-size: 1.3rem;
 }
 
 .card-subtitle {
-  margin-bottom: 3px;
+  margin-bottom: 6px;
 }
 
 .card-subtitle span, p{
@@ -267,6 +338,7 @@ input[type="checkbox"].checkbox + label {
   flex: .9;
   margin: 2% 5% 0 5%;
   min-width: 16%;
+  max-width: 20%;
 }
 
 .table__holder .table{
@@ -290,12 +362,17 @@ input[type="checkbox"].checkbox + label {
 }
 
 .textbox {
-  border: 8px solid grey;
   padding: 4%;
+  width: 90%
 }
 
 .textbox li{
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.Weather .Card1{
+  padding: 5%;
+  background-color: rgb(170,211,223);
 }
 
 footer {
@@ -304,3 +381,91 @@ footer {
   padding: 3%;
 }
 
+.Login__page {
+  background-color: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.login-main {
+  margin: 8%;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
+  border-radius: 4px;
+  position: relative;
+  padding: 2% 2% 3% 2%;
+}
+
+@media(max-width: 600px) {
+  .login-main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
+    border-radius: 4px;
+    position: relative;
+    padding: 4% 2% 5% 2%;
+  }
+}
+
+.login-container label{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+}
+
+.login-container input{
+  font-size: 1.02rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.btnContainer-login button {
+  font-size: 1.05rem;
+  text-align: center;
+  margin-top: 12px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #F7B301;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  width: 40%;
+  padding: 2%;
+}
+
+.btnContainer-login button:hover {
+  background-color: grey;
+}
+
+.Logout__section button{
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.Logout__section button:hover{
+  color: white;
+}
+
+@media(max-width: 600px) {
+  .Logout__section button{
+    color: white;
+  }
+}
