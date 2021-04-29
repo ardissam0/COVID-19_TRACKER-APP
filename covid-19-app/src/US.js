@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import axios from 'axios';
 import SearchStates from './SearchStates';
 import Table2 from './Table2';
@@ -64,13 +66,18 @@ function US() {
                             <span style={{ color: darkMode ? "slateblue" : "grey" }}>☾</span>
                         </div>
                 </div>
-                    <div className="table__holder">
-                        <Table2 states={states} setStates={setStates}/>
-                    </div>
+                    <Card>
+                      <CardContent>
+                            <h3>Live Cases by State</h3>
+                            <Table2 states={states} setStates={setStates}/>
+                      </CardContent>
+                    </Card>
               </div>
-                    <div className="search__states">
-                        <SearchStates states={states} setStates={setStates}/>
-                    </div>
+                    <Card className="search__states">
+                      <CardContent>
+                            <SearchStates states={states} setStates={setStates}/>
+                      </CardContent>
+                    </Card>
           </div>
   );
 };

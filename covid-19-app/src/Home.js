@@ -52,7 +52,6 @@ function Home() {
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
 
-
   useEffect(() => {
     fetch('https://disease.sh/v3/covid-19/all')
     .then(response => response.json())
@@ -115,9 +114,6 @@ function Home() {
                 <label htmlFor="checkbox" />
               </span>
               <span style={{ color: darkMode ? "slateblue" : "grey" }}>☾</span>
-              {/* <button onClick={() => setDarkMode(prevMode => !prevMode)}>
-              Toggle
-            </button> */}
             </div>
             <FormControl className="app__dropdown">
               <Select variant='outlined' value={country} onChange={onCountryChange}>

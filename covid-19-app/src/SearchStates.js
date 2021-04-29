@@ -44,60 +44,63 @@ const Wrapper = styled.div `
 `;
 
 
-export default function SearchStates(props) {
+export default function SearchStates( { states }) {
   const [searchSomething, setSearchSomething] = useState('');
-
-  useEffect(() => {
-    const results = props.states.filter(rec =>
-      rec.state.toLowerCase().includes(searchSomething.toLowerCase())
-      );
-      props.setStates(results);
-
-  }, [searchSomething]);
-
+  const [searchResult, setSearchResult] = useState(states);
   
-  const handleInputChange = event => {
-    setSearchSomething(event.target.value);
+  const handleInputChange = e => {
+    e.preventDefault();
+    e.stopPropagation();
+    setSearchSomething(e.target.value);
   };
  
+  const handleSubmit = e => {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  useEffect(() => {
+    const results = states.filter(rec =>
+      rec.state.toLowerCase().includes(searchSomething.toLowerCase())
+      );
+      setSearchResult(results);
+
+  }, [searchSomething, states]);
+
   return (
     <section className="state-list">
       <SearchHolder>
-        <form className="search">
-            <label htmlFor="search">Search States:&#8201;
-                <input 
-                    id="search"
+        <form onSubmit={handleSubmit} className="search">
+            <label htmlFor="search">Search States:
+                <input
                     type='text' 
                     placeholder='Enter State' 
                     onChange={handleInputChange}
-                    value={searchSomething}
-                    name="name"
-                    tabIndex="0"
                     className="prompt search-name"
                     autoComplete="off" 
-                    />
+                />
             </label>
         </form>
       </SearchHolder>
         <Wrapper>
-            {props.states.map(item => (
-                <StateHolder key={item.id}>
+            {searchResult.map(rec => (
+                <StateHolder rec={rec} key={rec.id}>
                     <Card className="stateCard">
                     <CardBody>
                         <CardTitle>
-                        <h2>{item.state}</h2>
+                        <h2>{rec.state}</h2>
                         </CardTitle>
                         <CardSubtitle>
-                        <span>Population: <p>{numeral(item.population).format("0.0a")}</p></span>
+                        <span>Population: <p>{numeral(rec.population).format("0.0a")}</p></span>
                         </CardSubtitle>
                         <CardSubtitle>
-                        <span>Tests: <p>{numeral(item.tests).format("0.0a")}</p></span>
+                        <span>Tests: <p>{numeral(rec.tests).format("0.0a")}</p></span>
                         </CardSubtitle>
                         <CardSubtitle>
-                        <span>Infected: <p>{numeral(item.cases).format("0.0a")}</p></span>
+                        <span>Infected: <p>{numeral(rec.cases).format("0.0a")}</p></span>
                         </CardSubtitle>
                         <CardSubtitle>
-                        <span>Deaths: <p>{numeral(item.deaths).format("0.0a")}</p></span>
+                        <span>Deaths: <p>{numeral(rec.deaths).format("0.0a")}</p></span>
                         </CardSubtitle>
                     </CardBody>
                     </Card>
@@ -106,4 +109,4 @@ export default function SearchStates(props) {
             </Wrapper>
     </section>
   );
-}
+ };
