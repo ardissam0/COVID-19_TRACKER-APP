@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import { Redirect } from "react-router";
+import { Link } from 'react-router-dom';
 import fire from "./fire";
 import { useUser } from './hooks';
 
@@ -43,9 +44,10 @@ function Login({ history }) {
         <input name="password" type="password" placeholder="Password" />
 
         <button className="mainLogin-btn" type="submit">Log in</button>
+        <p className="login-redirect">Don't have an account?</p><Link to="/signup"><p>Sign up here</p></Link>
       </form>
     </div>
   );
-}
+};
 
 export default Login;

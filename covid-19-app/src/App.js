@@ -1,17 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { AuthProvider } from "./providers";
+import PrivateRoute from "./PrivateRoute";
+
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
 import Navigation from './Navigation';
 import Weather from './Weather';
 import Home from './Home';
 import About from './About';
 import US from './US';
 import "leaflet/dist/leaflet.css";
-
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
-import { AuthProvider } from "./providers";
-import PrivateRoute from "./PrivateRoute";
-
 
 import './App.css';
 

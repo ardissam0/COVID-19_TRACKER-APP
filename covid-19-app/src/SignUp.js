@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import { Link } from 'react-router-dom';
 import fire from "./fire";
 
 import './App.css';
@@ -24,17 +25,19 @@ function SignUp({ history }) {
 
   return (
     <div className="login-main">
-      <h1>Sign up</h1>
       <form onSubmit={handleSignUp}>
+      <h1>Sign up</h1>
+      <br/>
         <label>
           Email
-          <input name="email" type="email" placeholder="Email" />
         </label>
+        <input name="email" type="email" placeholder="Email" />
         <label>
           Password
-          <input name="password" type="password" placeholder="Password" />
         </label>
+        <input name="password" type="password" placeholder="Password" />
         <button className="mainLogin-btn" type="submit">Sign Up</button>
+        <p className="login-redirect">Have an account already?</p><Link to="/signin"><p>Sign in here</p></Link>
       </form>
     </div>
   );

@@ -493,6 +493,11 @@ footer {
   background-color: grey;
 }
 
+.login-redirect{
+  margin-top: 10px;
+  font-weight: normal;
+}
+
 /* Logout Stlying */
 
 .Logout__button{
