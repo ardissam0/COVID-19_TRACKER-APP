@@ -4,8 +4,8 @@ import numeral from "numeral";
 
 import styled from "styled-components";
 
-import './Table.css';
-import './App.css';
+import '../CSS/Table.css';
+import '../CSS/App.css';
 
 const SearchHolder =styled.div `
   align-items: center;

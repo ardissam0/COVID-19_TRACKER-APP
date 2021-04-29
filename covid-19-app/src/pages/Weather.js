@@ -1,11 +1,12 @@
 import React from "react";
-import "./App.css";
-import Form from './form.component'
-import Weather from "./weather.component";
+import Form from '../components/form.component'
+import Weather from "../components/weather.component";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 import "weather-icons/css/weather-icons.css";
+
+import '../CSS/App.css';
 
 const Api_Key = "d4210c5a48808928859c78ecb801809d";
 

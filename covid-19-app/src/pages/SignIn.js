@@ -1,20 +1,20 @@
 import React, { useCallback } from "react";
+import { Redirect } from "react-router";
 import { Link } from 'react-router-dom';
-import fire from "./fire";
+import fire from "../config/fire";
+import { useUser } from '../hooks';
 
-import './App.css';
+import '../CSS/App.css';
 
-function SignUp({ history }) {
-  const handleSignUp = useCallback(
+function Login({ history }) {
+  const handleLogin = useCallback(
     async event => {
       event.preventDefault();
       const { email, password } = event.target.elements;
-
       try {
         await fire
           .auth()
-          .createUserWithEmailAndPassword(email.value, password.value);
-
+          .signInWithEmailAndPassword(email.value, password.value);
         history.push("/");
       } catch (error) {
         alert(error);
@@ -23,10 +23,16 @@ function SignUp({ history }) {
     [history]
   );
 
+  const currentUser = useUser();
+
+  if (currentUser) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <div className="login-main">
-      <form onSubmit={handleSignUp}>
-      <h1>Sign up</h1>
+      <form onSubmit={handleLogin}>
+      <h1>Log in</h1>
       <br/>
         <label>
           Email
@@ -36,11 +42,12 @@ function SignUp({ history }) {
           Password
         </label>
         <input name="password" type="password" placeholder="Password" />
-        <button className="mainLogin-btn" type="submit">Sign Up</button>
-        <p className="login-redirect">Have an account already?</p><Link to="/signin"><p>Sign in here</p></Link>
+
+        <button className="mainLogin-btn" type="submit">Log in</button>
+        <p className="login-redirect">Don't have an account?</p><Link to="/signup"><p>Sign up here</p></Link>
       </form>
     </div>
   );
-}
+};
 
-export default SignUp;
+export default Login;

@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { AuthProvider } from "./providers";
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from './components/PrivateRoute';
 
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
-import Navigation from './Navigation';
-import Weather from './Weather';
-import Home from './Home';
-import About from './About';
-import US from './US';
+import SignIn from './pages/SignIn';
+import SignUp from "./pages/SignUp";
+import Navigation from './components/Navigation';
+import Weather from './pages/Weather';
+import Home from './pages/Home';
+import About from './pages/About';
+import US from './pages/US';
 import "leaflet/dist/leaflet.css";
 
-import './App.css';
+import './CSS/App.css';
 
 function App() {
   return (

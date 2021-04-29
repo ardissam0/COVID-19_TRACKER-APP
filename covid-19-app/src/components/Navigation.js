@@ -1,7 +1,7 @@
 import React from 'react';
-import fire from "./fire";
+import fire from "../config/fire";
 import { Link } from 'react-router-dom';
-import { useUser } from "./hooks";
+import { useUser } from "../hooks";
 
 const Navigation = () => {
   const user = useUser();

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import '../CSS/App.css';
 
 function About() {
     const [darkMode, setDarkMode] = React.useState(getInitialMode());

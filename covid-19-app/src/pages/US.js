@@ -2,9 +2,10 @@ import React, {useState, useEffect} from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import axios from 'axios';
-import SearchStates from './SearchStates';
-import Table2 from './Table2';
-import './App.css';
+import SearchStates from '../components/SearchStates';
+import Table2 from '../components/Table2';
+
+import '../CSS/App.css';
 
 function US() {
     const [states, setStates] = useState([]);

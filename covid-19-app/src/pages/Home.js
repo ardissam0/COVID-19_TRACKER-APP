@@ -1,18 +1,18 @@
 import React, {useState, useEffect} from 'react';
-import InfoBox from './InfoBox';
-import Map from './Map';
-import Table from './Table';
-import LineGraph from './LineGraph';
+import InfoBox from '../components/InfoBox';
+import Map from '../components/Map';
+import Table from '../components/Table';
+import LineGraph from '../components/LineGraph';
 import "leaflet/dist/leaflet.css";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import {sortData, prettyPrintStat} from './util';
+import {sortData, prettyPrintStat} from '../components/util';
 import numeral from 'numeral';
 
-import './App.css';
+import '../CSS/App.css';
 
 function Home() {
   const [countries, setCountries] = useState([]);
