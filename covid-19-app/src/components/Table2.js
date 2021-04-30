@@ -1,5 +1,5 @@
 import React from 'react';
-import './Table.css';
+import '../CSS/Table.css';
 import numeral from "numeral";
 
 function Table2(props) {

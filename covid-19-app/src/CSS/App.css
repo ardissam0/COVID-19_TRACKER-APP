@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -71,7 +72,7 @@ code {
   display: flex;
   justify-content: space-evenly;
   padding: 15px;
-  border-bottom: 8px solid grey;
+  border-bottom: 3px solid #313843;
   background-color: #f5f6fa;
   font-size: 1.2rem;
 }
@@ -79,7 +80,6 @@ code {
 @media(max-width: 600px) {
   .navigation {
     flex-direction: column;
-    margin-top: 10px;
     background-color: #f5f6fa;
   }
 }
@@ -93,49 +93,96 @@ code {
 }
 
 .navigation .navLink p{
-  color: black;
+  color: #313843;
 }
 
 .navigation .navLink:hover{
-  background-color: grey;
+  background-color: #313843;
   transition: all 250ms ease-in-out;
   border-radius: 5px;
 }
 
 .navigation .navLink p:hover{
   transition: all 250ms ease-in-out;
-  color: white;
+  color: #f5f6fa;
 }
 
 @media(max-width: 600px) {
   .navigation .navLink {
     margin-top: 10px;
-    background-color: grey;
+    background-color: #313843;
     text-align: center;
   }
 }
 
 @media(max-width: 600px) {
   .navigation .navLink p {
-    color: white;
+    color: #f5f6fa;
   }
 }
 
 /* Dark Mode Styles */
 
-.dark-mode {
-  background-color: #1a1919;
-  color: white;
-  transition: background-color 0.25s ease-out;
+.dark-mode__container {
   display: flex;
-  justify-content: space-evenly;
-  padding: 20px;
-  font-weight: bold;
+  margin-top: 1px;
 }
 
-.light-mode {
-  background-color: #f5f6fa;
+@media(max-width: 600px) {
+  .dark-mode__container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+.dark-mode__container .light__symbol{
+  margin: 3.5px;
+  color: gold;
+}
+
+.dark-mode__container .dark__symbol{
+  margin: 3.5px;
+  color: midnightblue;
+}
+
+.dark-mode__toggle {
+  margin: 2px;
+  background: transparent;
+  border-radius: 50px;
+  border: 2px solid black;
+  height: 19px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: #313843;
+  border-radius: 75px;
+  height: 15px;
+  left: 4px;
+  margin-top: 1.5px;
+  position: absolute;
+  transition: 0.2s;
+  width: 9px;
+}
+
+.toggle:hover {
+  cursor: pointer;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
   transition: background-color 0.25s ease-out;
+}
+
+/* Main pages styling */
+
+.mainPage__style {
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
@@ -143,12 +190,10 @@ code {
 }
 
 @media(max-width: 990px) {
-  .dark-mode, .light-mode {
+  .mainPage__style {
     flex-direction: column;
   }
 }
-
-/* Main pages styling */
 
 .app__header {
   display: flex;
@@ -317,23 +362,6 @@ input[type="checkbox"].checkbox + label {
 
 /* United States Page Styling*/
 
-.state-list {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 3rem;
-  width: 100%;
-  min-height: 100vh;
-  min-width: 82%;
-}
-
-@media(max-width: 990px) {
-  .search__states {
-    border-top: 8px solid grey;
-  }
-}
-
 .stateCard h2 {
   margin-bottom: 8px;
   padding: 0 0 3px 0px;
@@ -344,26 +372,38 @@ input[type="checkbox"].checkbox + label {
   flex: .9;
   margin: 2% 5% 0 5%;
   min-width: 16%;
-  max-width: 20%;
+  max-width: 25%;
 }
 
 .table__holder .table{
   margin-top: 42px;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1350px) {
+  .search__states {
+    max-width: 65%;
+  }
+}
+
+@media(max-width: 990px) {
+  .search__states {
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 990px) {
   .app__left-US {
     margin: 2% 2% 8% 2%;
     max-width: 100%;
   }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 990px) {
   .sc-bdvvaa.fOHLde, form .search{
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 2% 2% 8% 2%;
+    margin: 3% 2% 8% 10%;
     padding: 0;
   }
 }
@@ -374,23 +414,18 @@ input[type="checkbox"].checkbox + label {
   align-self: flex-end;
 }
 
-@media(max-width: 800px) {
-  .search input{
-    margin-top: 7px;
-  }
+.search input{
+  margin-left: 5px;
 }
 
 .input {
   margin: 0.5rem;
 }
 
-.textbox {
-  padding: 4%;
-  width: 90%
-}
-
-.textbox li{
-  margin-bottom: 10px;
+.sc-dkPtyc .itmsRu {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .sc-gsDJrp.jeqovw {
@@ -405,19 +440,103 @@ input[type="checkbox"].checkbox + label {
   }
 }
 
-/* Weather Page Styling */
+/* About Page Styling */
 
-.Weather .Card1{
-  padding: 5%;
-  background-color: rgb(170,211,223);
+.textbox {
+  text-align: center;
+  padding: 4%;
+  width: 40%;
+}
+
+@media(max-width: 990px) {
+  .textbox {
+    text-align: center;
+    width: 90%;
+  }
+}
+
+.textbox li{
+  margin-bottom: 15px;
+  padding: 1%;
+  border: 1.5px solid #39404d;
+}
+
+.textbox li:first-child {
+  font-size: 1.3rem;
+  border: none;
 }
 
 /* Footer Styling */
 
+.footer-container {
+  position: relative;
+  min-height: 60vh;
+}
+
 footer {
   text-align: center;
-  background-color: #f5f6fa;
-  padding: 3%;
+  background-color: #39404d;
+  color: #f5f6fa;
+  position: absolute; 
+  bottom: 0; 
+  width: 100%;
+}
+
+.navigation-footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+  background-color: #39404d;
+  font-size: 1.2rem;
+}
+
+.navigation-footer footer span {
+  padding: 10px;
+}
+
+@media(max-width: 600px) {
+  .navigation-footer {
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #39404d;
+  }
+}
+
+.navigation-footer  .navLink{
+  border: 1px solid #39404d;
+  background-color: #39404d;
+  border-radius: 5x;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.navigation-footer .navLink p{
+  color: #f5f6fa;
+}
+
+.navigation-footer  .navLink:hover{
+  background-color: #F7B301;
+  transition: all 250ms ease-in-out;
+  border-radius: 5px;
+}
+
+.navigation-footer  .navLink p:hover{
+  transition: all 250ms ease-in-out;
+  color: #313843;
+}
+
+@media(max-width: 600px) {
+  .navigation-footer  .navLink {
+    margin-top: 10px;
+    background-color:#f5f6fa;;
+    text-align: center;
+  }
+}
+
+@media(max-width: 600px) {
+  .navigation-footer  .navLink p {
+    color: #313843;
+  }
 }
 
 /* Login/SignUp Styling */
@@ -436,10 +555,10 @@ footer {
     font-size: 1.05rem;
     margin-bottom: 8px;
     font-weight: bold;
-    color: black;
+    color: #313843;
 
-    background-color: #fff;
-    box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
+    background-color: #f5f6fa;
+    box-shadow: 0px 0px 12px 2px rgba(66, 64, 64, 0.2);
     border-radius: 4px;
     position: relative;
     padding: 2% 2% 3% 2%;
@@ -462,7 +581,7 @@ footer {
   font-size: 1.05rem;
   margin-bottom: 8px;
   font-weight: bold;
-  color: black;
+  color: #313843;
 }
 
 .login-main input{
@@ -470,7 +589,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin-bottom: 5px;
-  color: black;
+  color: #313843;
 }
 
 .login-main .mainLogin-btn {
@@ -490,7 +609,7 @@ footer {
 }
 
 .login-main .mainLogin-btn:hover {
-  background-color: grey;
+  background-color: #313843;
 }
 
 .login-redirect{
@@ -515,5 +634,25 @@ footer {
 @media(max-width: 600px) {
   .Logout__button{
     color: white;
+  }
+}
+
+.Logout__button-footer {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #f5f6fa;
+}
+
+.Logout__button-footer:hover {
+  transition: all 250ms ease-in-out;
+  color: #313843;
+}
+
+@media(max-width: 600px) {
+  .Logout__button-footer {
+    color: #313843;
   }
 }
