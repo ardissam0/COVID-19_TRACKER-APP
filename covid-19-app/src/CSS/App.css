@@ -362,17 +362,6 @@ input[type="checkbox"].checkbox + label {
 
 /* United States Page Styling*/
 
-.state-list {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 3rem;
-  width: 100%;
-  min-height: 100vh;
-  min-width: 82%;
-}
-
 .stateCard h2 {
   margin-bottom: 8px;
   padding: 0 0 3px 0px;
@@ -383,21 +372,33 @@ input[type="checkbox"].checkbox + label {
   flex: .9;
   margin: 2% 5% 0 5%;
   min-width: 16%;
-  max-width: 20%;
+  max-width: 25%;
 }
 
 .table__holder .table{
   margin-top: 42px;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1350px) {
+  .search__states {
+    max-width: 65%;
+  }
+}
+
+@media(max-width: 990px) {
+  .search__states {
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 990px) {
   .app__left-US {
     margin: 2% 2% 8% 2%;
     max-width: 100%;
   }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 990px) {
   .sc-bdvvaa.fOHLde, form .search{
     text-align: center;
     align-items: center;
@@ -421,15 +422,6 @@ input[type="checkbox"].checkbox + label {
   margin: 0.5rem;
 }
 
-.textbox {
-  padding: 4%;
-  width: 90%
-}
-
-.textbox li{
-  margin-bottom: 10px;
-}
-
 .sc-dkPtyc .itmsRu {
   justify-content: center;
   align-content: center;
@@ -446,6 +438,32 @@ input[type="checkbox"].checkbox + label {
     min-width: 20%;
     padding: 5% 0% 6% 0%;
   }
+}
+
+/* About Page Styling */
+
+.textbox {
+  text-align: center;
+  padding: 4%;
+  width: 40%;
+}
+
+@media(max-width: 990px) {
+  .textbox {
+    text-align: center;
+    width: 90%;
+  }
+}
+
+.textbox li{
+  margin-bottom: 15px;
+  padding: 1%;
+  border: 1.5px solid #39404d;
+}
+
+.textbox li:first-child {
+  font-size: 1.3rem;
+  border: none;
 }
 
 /* Footer Styling */

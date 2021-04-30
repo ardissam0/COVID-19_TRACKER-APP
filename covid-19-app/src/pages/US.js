@@ -23,8 +23,6 @@ function US() {
   return (
           <div className='mainPage__style'>
               <div className="app__left-US">
-                <div className="app__header">
-                </div>
                     <Card>
                       <CardContent>
                             <h3>Live Cases by State</h3>

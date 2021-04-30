@@ -71,7 +71,7 @@ export default function SearchStates( { states }) {
     <section className="state-list">
       <SearchHolder>
         <form onSubmit={handleSubmit} className="search">
-            <label htmlFor="search">Search States:</label>
+            <label htmlFor="search">Search:</label>
             <input
                     type='text' 
                     placeholder='Enter State' 

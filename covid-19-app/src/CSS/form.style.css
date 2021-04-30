@@ -34,6 +34,7 @@
 
   form input[name="city"],
   form input[name="country"] {
+    font-size: 1.05rem;
     background-color: transparent;
     color: #313843;
     border: none;
