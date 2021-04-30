@@ -108,9 +108,9 @@ class App extends React.Component {
     return (
       <div className='mainPage__style'>
           <div className="Weather">
-              <Form loadweather={this.getWeather} error={this.state.error} />
               <Card>
                   <CardContent>
+                  <Form loadweather={this.getWeather} error={this.state.error} />
                       <Weather
                           cityname={this.state.city}
                           weatherIcon={this.state.icon}

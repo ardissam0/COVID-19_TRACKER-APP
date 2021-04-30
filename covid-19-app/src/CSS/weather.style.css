@@ -1,12 +1,21 @@
-.container-weather {
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: bold;
+.Weather {
+    padding: 3%;
 }
 
 .Weather .Card1{
-    padding: 5%;
-    background-color: rgb(170,211,223);
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10%;
+  }
+
+  @media(max-width: 800px) {
+    .Weather{
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding: 5%;
+      }
   }
 
 .city-name__weather, .display-degrees, .weather-description{

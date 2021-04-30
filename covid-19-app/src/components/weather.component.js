@@ -3,7 +3,6 @@ import "../CSS/weather.style.css";
 
 const Weather = props => {
   return (
-    <div className="container-weather">
       <div className="Card1">
         <h1 className="city-name__weather">{props.cityname}</h1>
         <h5 className="weather-icon">
@@ -24,7 +23,6 @@ const Weather = props => {
             props.description.slice(1)}
         </h4>
       </div>
-    </div>
   );
 };
 
