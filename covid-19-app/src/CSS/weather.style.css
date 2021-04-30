@@ -4,6 +4,11 @@
     font-weight: bold;
 }
 
+.Weather .Card1{
+    padding: 5%;
+    background-color: rgb(170,211,223);
+  }
+
 .city-name__weather, .display-degrees, .weather-description{
     margin: 15px;
 }

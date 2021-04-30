@@ -5,8 +5,8 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 import "weather-icons/css/weather-icons.css";
-
 import '../CSS/App.css';
+import '../CSS/weather.style.css';
 
 const Api_Key = "d4210c5a48808928859c78ecb801809d";
 
@@ -106,21 +106,23 @@ class App extends React.Component {
 
   render() {
     return (
-        <div className="Weather">
-            <Form loadweather={this.getWeather} error={this.state.error} />
-            <Card>
-                <CardContent>
-                    <Weather
-                        cityname={this.state.city}
-                        weatherIcon={this.state.icon}
-                        temp_fahrenheit={this.state.celsius}
-                        temp_max={this.state.temp_max}
-                        temp_min={this.state.temp_min}
-                        description={this.state.description}
-                    />
-                </CardContent>
-            </Card>
-        </div>
+      <div className='mainPage__style'>
+          <div className="Weather">
+              <Form loadweather={this.getWeather} error={this.state.error} />
+              <Card>
+                  <CardContent>
+                      <Weather
+                          cityname={this.state.city}
+                          weatherIcon={this.state.icon}
+                          temp_fahrenheit={this.state.celsius}
+                          temp_max={this.state.temp_max}
+                          temp_min={this.state.temp_min}
+                          description={this.state.description}
+                      />
+                  </CardContent>
+              </Card>
+          </div>
+      </div>
     );
   }
 }

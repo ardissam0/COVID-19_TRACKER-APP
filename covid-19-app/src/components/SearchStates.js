@@ -71,15 +71,14 @@ export default function SearchStates( { states }) {
     <section className="state-list">
       <SearchHolder>
         <form onSubmit={handleSubmit} className="search">
-            <label htmlFor="search">Search States:
-                <input
+            <label htmlFor="search">Search States:</label>
+            <input
                     type='text' 
                     placeholder='Enter State' 
                     onChange={handleInputChange}
                     className="prompt search-name"
                     autoComplete="off" 
                 />
-            </label>
         </form>
       </SearchHolder>
         <Wrapper>

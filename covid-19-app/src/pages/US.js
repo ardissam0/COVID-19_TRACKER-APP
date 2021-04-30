@@ -9,34 +9,6 @@ import '../CSS/App.css';
 
 function US() {
     const [states, setStates] = useState([]);
-    const [darkMode, setDarkMode] = React.useState(getInitialMode());
-
-  React.useEffect(() => {
-    localStorage.setItem("dark", JSON.stringify(darkMode));
-  }, [darkMode]);
-
-  function getInitialMode() {
-    const isReturningUser = "dark" in localStorage;
-    const savedMode = JSON.parse(localStorage.getItem("dark"));
-    const userPrefersDark = getPrefColorScheme();
-    // if mode was saved --> dark / light
-    if (isReturningUser) {
-      return savedMode;
-      // if preferred color scheme is dark --> dark
-    } else if (userPrefersDark) {
-      return true;
-      // otherwise --> light
-    } else {
-      return false;
-    }
-    // return savedMode || false;
-  }
-
-  function getPrefColorScheme() {
-    if (!window.matchMedia) return;
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  }
 
   useEffect(() => {
     axios.get("https://disease.sh/v3/covid-19/states/")
@@ -49,23 +21,9 @@ function US() {
 
 
   return (
-          <div className={darkMode ? "dark-mode" : "light-mode"}>
+          <div className='mainPage__style'>
               <div className="app__left-US">
                 <div className="app__header">
-                        <div className="toggle-container">
-                            <span style={{ color: darkMode ? "yellow" : "grey" }}>☀︎</span>
-                            <span className="toggle">
-                                <input
-                                checked={darkMode}
-                                onChange={() => setDarkMode(prevMode => !prevMode)}
-                                id="checkbox"
-                                className="checkbox"
-                                type="checkbox"
-                                />
-                                <label htmlFor="checkbox" />
-                            </span>
-                            <span style={{ color: darkMode ? "slateblue" : "grey" }}>☾</span>
-                        </div>
                 </div>
                     <Card>
                       <CardContent>
