@@ -457,7 +457,7 @@ input[type="checkbox"].checkbox + label {
 
 footer {
   text-align: center;
-  background-color: #313843;
+  background-color: #39404d;
   color: #f5f6fa;
   position: absolute; 
   bottom: 0; 
@@ -468,7 +468,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 15px;
-  background-color: #313843;
+  background-color: #39404d;
   font-size: 1.2rem;
 }
 
@@ -480,13 +480,13 @@ footer {
   .navigation-footer {
     flex-direction: column;
     margin-top: 10px;
-    background-color: #313843;
+    background-color: #39404d;
   }
 }
 
 .navigation-footer  .navLink{
-  border: 1px solid #313843;
-  background-color: #313843;
+  border: 1px solid #39404d;
+  background-color: #39404d;
   border-radius: 5x;
   padding: 5px;
   font-weight: bold;
