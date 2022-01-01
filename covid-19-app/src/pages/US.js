@@ -22,12 +22,7 @@ function US() {
 
   return (
           <div className='mainPage__style-US'>
-                    <Card className="search__states">
-                      <CardContent>
-                            <SearchStates states={states} setStates={setStates}/>
-                      </CardContent>
-                    </Card>
-                    <div className="app__left-US">
+              <div className="app__left-US">
                     <Card>
                       <CardContent>
                             <h3>Live Cases by State</h3>
@@ -35,6 +30,11 @@ function US() {
                       </CardContent>
                     </Card>
               </div>
+                    <Card className="search__states">
+                      <CardContent>
+                            <SearchStates states={states} setStates={setStates}/>
+                      </CardContent>
+                    </Card>
           </div>
   );
 };
