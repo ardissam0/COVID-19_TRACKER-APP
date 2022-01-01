@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { AuthProvider } from "./providers";
 import PrivateRoute from './components/PrivateRoute';
-import { Link } from 'react-router-dom';
-import fire from './config/fire';
 
 import SignIn from './pages/SignIn';
 import SignUp from "./pages/SignUp";
@@ -31,31 +29,11 @@ function App() {
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/signup" component={SignUp} />
           </div>
-            <div className="footer-container">
               <footer>
-                    <div className="navigation-footer">
-                      <div className="navLink">
-                      <Link style ={{textDecoration: 'None'}} to="/"><p>COVID-19 TRACKER</p></Link>
-                    </div>
-                    <div className="navLink">
-                      <Link style ={{textDecoration: 'None'}} to="/US"><p>United States</p></Link>
-                    </div>
-                    <div className="navLink">
-                      <Link style ={{textDecoration: 'None'}} to="/Weather"><p>Weather</p></Link>
-                    </div>
-                    <div className="navLink">
-                      <Link style ={{textDecoration: 'None'}} to="/About"><p>About</p></Link>
-                    </div>
-                    <div className="navLink">
-                      <button className="Logout__button-footer" onClick={() => fire.auth().signOut()}>Log Out</button>
-                    </div>
-                  </div>
-                  <span>&copy; Copyright {(new Date().getFullYear())} COVID-19 TRACKER</span>
-                  <br/>
-                  <br/>
-                  <br/>
+                <div>
+                  <span>&copy; Copyright {(new Date().getFullYear())} www.samardis.com</span>
+                </div>
               </footer>
-        </div>  
         </Router>
       </AuthProvider>
     </div>

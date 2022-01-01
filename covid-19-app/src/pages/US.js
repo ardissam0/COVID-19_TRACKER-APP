@@ -21,7 +21,7 @@ function US() {
 
 
   return (
-          <div className='mainPage__style'>
+          <div className='mainPage__style-US'>
               <div className="app__left-US">
                     <Card>
                       <CardContent>

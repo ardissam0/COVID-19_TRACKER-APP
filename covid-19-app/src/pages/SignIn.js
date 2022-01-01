@@ -32,7 +32,7 @@ function Login({ history }) {
   return (
     <div className="login-main">
       <form onSubmit={handleLogin}>
-      <h1>Log in</h1>
+      <h1>Login</h1>
       <br/>
         <label>
           Email
@@ -43,7 +43,7 @@ function Login({ history }) {
         </label>
         <input name="password" type="password" placeholder="Password" />
 
-        <button className="mainLogin-btn" type="submit">Log in</button>
+        <button className="mainLogin-btn" type="submit">Login</button>
         <p className="login-redirect">Don't have an account?</p><Link to="/signup"><p>Sign up here</p></Link>
       </form>
     </div>

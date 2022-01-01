@@ -2,46 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import numeral from "numeral";
 
-import styled from "styled-components";
-
 import '../CSS/Table.css';
 import '../CSS/App.css';
 
-const SearchHolder =styled.div `
-  align-items: center;
-  padding: 2rem;
-  margin-left: 1rem;
-  padding-left: 2rem;
-  width: 50%;
-  font-size: 1.2rem;
-  @media(max-width:990px) {
-    width: 98%;
-    margin-top: 3%;
-  }
-`;
-
-const StateHolder = styled.div `
-    display: flex;
-    margin: 1%;
-    padding: 2%;
-    border-radius: 10px;
-    width: 17%;
-    box-shadow: 0 8px 17px rgba(170, 170, 170, 0.8), 0 17px 14px rgba(170, 170, 170, 0.22);
-    @media(max-width:900px) {
-      padding: 3%;
-      margin-bottom: 30px;
-      width: 45%;
-    }
-    @media(max-width:600px) {
-      width: 90%;
-    }
-`;
-
-
-const Wrapper = styled.div `
-    display: flex;
-    flex-wrap: wrap;
-`;
 
 
 export default function SearchStates( { states }) {
@@ -69,7 +32,7 @@ export default function SearchStates( { states }) {
 
   return (
     <section className="state-list">
-      <SearchHolder>
+      <div className="search-holder">
         <form onSubmit={handleSubmit} className="search">
             <label htmlFor="search">Search:</label>
             <input
@@ -80,10 +43,10 @@ export default function SearchStates( { states }) {
                     autoComplete="off" 
                 />
         </form>
-      </SearchHolder>
-        <Wrapper>
+      </div>
+        <div className="state-results">
             {searchResult.map(rec => (
-                <StateHolder rec={rec} key={rec.id}>
+                <div className= "state-holder" rec={rec} key={rec.id}>
                     <Card className="stateCard">
                     <CardBody>
                         <CardTitle>
@@ -103,9 +66,9 @@ export default function SearchStates( { states }) {
                         </CardSubtitle>
                     </CardBody>
                     </Card>
-                    </StateHolder>
+                    </div>
                         ))}
-            </Wrapper>
+            </div>
     </section>
   );
  };
