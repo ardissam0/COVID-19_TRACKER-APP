@@ -18,10 +18,10 @@ const Navigation = () => {
       <div className="navigation">
       {user?.profile}
         <div className="navLink">
-          <Link style ={{textDecoration: 'None'}} to="/"><p>COVID-19 TRACKER</p></Link>
+          <Link style ={{textDecoration: 'None'}} to="/"><p>Covid-19</p></Link>
         </div>
         <div className="navLink">
-          <Link style ={{textDecoration: 'None'}} to="/US"><p>United States</p></Link>
+          <Link style ={{textDecoration: 'None'}} to="/US"><p>US Tracker</p></Link>
         </div>
         <div className="navLink">
           <Link style ={{textDecoration: 'None'}} to="/Weather"><p>Weather</p></Link>
@@ -30,7 +30,7 @@ const Navigation = () => {
           <Link style ={{textDecoration: 'None'}} to="/About"><p>About</p></Link>
         </div>
         <div className="navLink">
-          <button className="Logout__button" onClick={() => fire.auth().signOut()}>Log Out</button>
+          <Link style ={{textDecoration: 'None'}} onClick={() => fire.auth().signOut()}><p>Logout</p></Link>
         </div>
         <div className="dark-mode__container">
                   <span className="light__symbol">☀︎</span>
