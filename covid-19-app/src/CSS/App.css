@@ -314,6 +314,10 @@ h1 {
   margin-top: 42px;
 }
 
+.MuiPaper-root.MuiCard-root.search__states.MuiPaper-elevation1.MuiPaper-rounded {
+  min-width: 100%;
+}
+
 .search__states .MuiCardContent-root {
   background-color: var(--clr-background);
 }
